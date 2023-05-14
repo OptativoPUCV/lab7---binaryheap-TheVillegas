@@ -90,3 +90,23 @@ Sun 14 May 2023 12:32:11 AM UTC:
  tests:  2|2
 total_score: 20/70
 055cc8d
+Sun 14 May 2023 12:40:31 AM UTC: 
+ heap.c | 8 ++++++++
+ 1 file changed, 8 insertions(+)
+In file included from test.c:4:
+heap.c: In function ‘heap_push’:
+heap.c:36:5: error: ‘pc’ undeclared (first use in this function); did you mean ‘pq’?
+   36 |     pc->capac *=2;
+      |     ^~
+      |     pq
+heap.c:36:5: note: each undeclared identifier is reported only once for each function it appears in
+heap.c:37:9: error: ‘Heap’ {aka ‘struct Heap’} has no member named ‘heapArrar’; did you mean ‘heapArray’?
+   37 |     pq->heapArrar = realloc(pq->HeapArray,pq->capac * sizeof(heapElem));
+      |         ^~~~~~~~~
+      |         heapArray
+heap.c:37:33: error: ‘Heap’ {aka ‘struct Heap’} has no member named ‘HeapArray’; did you mean ‘heapArray’?
+   37 |     pq->heapArrar = realloc(pq->HeapArray,pq->capac * sizeof(heapElem));
+      |                                 ^~~~~~~~~
+      |                                 heapArray
+Compilation failed
+92f3a11
