@@ -41,3 +41,29 @@ heap.c:43:4: error: ‘Heap’ {aka ‘struct Heap’} has no member named ‘pr
 cc1: all warnings being treated as errors
 Compilation failed
 269074a
+Sun 14 May 2023 12:26:07 AM UTC: 
+ heap.c | 5 ++---
+ 1 file changed, 2 insertions(+), 3 deletions(-)
+In file included from test.c:4:
+heap.c: In function ‘createHeap’:
+heap.c:38:13: error: implicit declaration of function ‘createheap’; did you mean ‘createHeap’? [-Werror=implicit-function-declaration]
+   38 |   Heap *h = createheap();
+      |             ^~~~~~~~~~
+      |             createHeap
+heap.c:38:13: error: initialization of ‘Heap *’ {aka ‘struct Heap *’} from ‘int’ makes pointer from integer without a cast [-Werror=int-conversion]
+heap.c:41:4: error: ‘Heap’ {aka ‘struct Heap’} has no member named ‘data’
+   41 |   h->data = NULL;
+      |    ^~
+heap.c:42:4: error: ‘Heap’ {aka ‘struct Heap’} has no member named ‘priority’
+   42 |   h->priority = 0;
+      |    ^~
+heap.c:44:10: error: ‘auxM’ undeclared (first use in this function)
+   44 |   return auxM;
+      |          ^~~~
+heap.c:44:10: note: each undeclared identifier is reported only once for each function it appears in
+heap.c:45:1: error: control reaches end of non-void function [-Werror=return-type]
+   45 | }
+      | ^
+cc1: all warnings being treated as errors
+Compilation failed
+f78285b
