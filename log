@@ -110,3 +110,19 @@ heap.c:37:33: error: ‘Heap’ {aka ‘struct Heap’} has no member named ‘H
       |                                 heapArray
 Compilation failed
 92f3a11
+Sun 14 May 2023 12:40:39 AM UTC: 
+ heap.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+In file included from test.c:4:
+heap.c: In function ‘heap_push’:
+heap.c:36:5: error: ‘pc’ undeclared (first use in this function); did you mean ‘pq’?
+   36 |     pc->capac *=2;
+      |     ^~
+      |     pq
+heap.c:36:5: note: each undeclared identifier is reported only once for each function it appears in
+heap.c:37:33: error: ‘Heap’ {aka ‘struct Heap’} has no member named ‘HeapArray’; did you mean ‘heapArray’?
+   37 |     pq->heapArray = realloc(pq->HeapArray,pq->capac * sizeof(heapElem));
+      |                                 ^~~~~~~~~
+      |                                 heapArray
+Compilation failed
+b25eec6
