@@ -67,3 +67,14 @@ heap.c:45:1: error: control reaches end of non-void function [-Werror=return-typ
 cc1: all warnings being treated as errors
 Compilation failed
 f78285b
+Sun 14 May 2023 12:29:10 AM UTC: 
+ heap.c | 9 ++++-----
+ 1 file changed, 4 insertions(+), 5 deletions(-)
+In file included from test.c:4:
+heap.c: In function ‘createHeap’:
+heap.c:41:9: error: ‘Heap’ {aka ‘struct Heap’} has no member named ‘capc’; did you mean ‘capac’?
+   41 |   auxM->capc = 3;
+      |         ^~~~
+      |         capac
+Compilation failed
+6d79c3b
