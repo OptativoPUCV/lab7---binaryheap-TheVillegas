@@ -29,14 +29,19 @@ void* heap_top(Heap* pq){
 
 void heap_push(Heap* pq, void* data, int priority){
 
-  
-
   if(pq->size == pq->capac)
   {
     pq->capac *=2;
     pq->heapArray = realloc(pq->heapArray,pq->capac * sizeof(heapElem));
   }
 
+  int posicion = pc->size;
+
+  while(priority > pq->heapArray[(posicion-1) / 2 ].priority && posicion)
+    {
+      pq->heapArray[posicion] = pq->heapArray[(posicion-1)/2];
+      posicion = (posicion -1) / 2;
+    }
 }
 
 

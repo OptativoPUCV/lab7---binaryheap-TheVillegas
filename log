@@ -143,3 +143,15 @@ Sun 14 May 2023 12:40:53 AM UTC:
  tests:  2|2
 total_score: 20/70
 4efa4b6
+Sun 14 May 2023 12:46:36 AM UTC: 
+ heap.c | 7 +++++++
+ 1 file changed, 7 insertions(+)
+In file included from test.c:4:
+heap.c: In function ‘heap_push’:
+heap.c:38:18: error: ‘pc’ undeclared (first use in this function); did you mean ‘pq’?
+   38 |   int posicion = pc->size;
+      |                  ^~
+      |                  pq
+heap.c:38:18: note: each undeclared identifier is reported only once for each function it appears in
+Compilation failed
+8ca501f
