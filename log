@@ -167,3 +167,16 @@ Sun 14 May 2023 12:48:00 AM UTC:
  tests:  5|2
 total_score: 35/70
 4f88715
+Sun 14 May 2023 12:48:33 AM UTC: 
+ heap.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+In file included from test.c:4:
+heap.c: In function ‘heap_push’:
+heap.c:34:32: error: expected ‘;’ before ‘pq’
+   34 |     pq->capac = pq->capac * 2+1
+      |                                ^
+      |                                ;
+   35 |     pq->heapArray = realloc(pq->heapArray,pq->capac * sizeof(heapElem));
+      |     ~~                          
+Compilation failed
+edd672e
