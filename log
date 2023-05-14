@@ -2,3 +2,14 @@ Sun 14 May 2023 12:19:42 AM UTC:
  tests:  0|4
 total_score: 0/70
 27b434f
+Sun 14 May 2023 12:23:42 AM UTC: 
+ heap.c | 7 ++++++-
+ 1 file changed, 6 insertions(+), 1 deletion(-)
+In file included from test.c:4:
+heap.c: In function ‘createHeap’:
+heap.c:40:9: error: ‘Heap’ {aka ‘struct Heap’} has no member named ‘capc’; did you mean ‘capac’?
+   40 |   auxM->capc = 3;
+      |         ^~~~
+      |         capac
+Compilation failed
+bdb4992
