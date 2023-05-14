@@ -38,7 +38,7 @@ Heap* createHeap(){
   auxM->heapArray = (heapElem *)malloc(3*sizeof(heapElem));
 
   auxM->size = 0;
-  auxM->capc = 3;
+  auxM->capac = 3;
 
    return auxM;
 }
